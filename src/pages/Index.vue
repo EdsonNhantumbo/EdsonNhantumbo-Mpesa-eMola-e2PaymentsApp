@@ -156,8 +156,8 @@ export default {
         grant_type: 'client_credentials', //nao altere
 
         // Crie e copie as credenciais aqui: https://e2payments.explicador.co.mz/admin/credentials
-        client_id: process.env.CLIENT_ID, // neste formato '99227735-dd04-4538-bf50-27eeed2bbbb'
-        client_secret: process.env.CLIENT_SECRET, // neste formato 'EuLHLIyhm9mFEgZPBKrBdZHXKuyygfRHZWelscTx'
+        client_id: '992d21a4-79f4-45d3-9dc9-03486c190826', // neste formato '99227735-dd04-4538-bf50-27eeed2bbbb'
+        client_secret: '2yio8lT828yVD7OSy7quRoWBFVupcfk7m63XElbN', // neste formato 'EuLHLIyhm9mFEgZPBKrBdZHXKuyygfRHZWelscTx'
 
         // Use este link para criar e copiar o id para a sua carteira Mpesa: https://e2payments.explicador.co.mz/admin/wallets?w=MPesa
         //nao eh preciso enviar para requisitar token
