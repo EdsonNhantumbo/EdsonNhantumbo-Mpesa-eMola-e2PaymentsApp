@@ -161,11 +161,12 @@ export default {
 
         // Use este link para criar e copiar o id para a sua carteira Mpesa: https://e2payments.explicador.co.mz/admin/wallets?w=MPesa
         //nao eh preciso enviar para requisitar token
-        mpesa_wallet: process.env.MPESA_WALLET, //formato 123456
+        //https://developer.mpesa.vm.co.mz/ para encontrar os valortes para preencher a carteira no e2payment
+        mpesa_wallet: 585916, //formato 123456
 
         // Use este link para criar e copiar o id para a sua carteira eMola: https://e2payments.explicador.co.mz/admin/wallets?w=eMola
         //nao eh preciso enviar para requisitar token
-        emola_wallet: process.env.EMOLA_WALLET, //formato 123456
+        //emola_wallet: process.env.EMOLA_WALLET, //formato 123456
       }
 
       // Requisicao do token
@@ -195,7 +196,7 @@ export default {
       // Endpoint para pagamento via Mpesa ou eMola
       const paymentEndpoint =
           (this.paymentOptSelected === 'Mpesa') ? 'https://e2payments.explicador.co.mz/v1/c2b/mpesa-payment/' + credentials.mpesa_wallet :
-          this.paymentOptSelected === 'eMola' ? 'https://e2payments.explicador.co.mz/v1/c2b/emola-payment/' + credentials.emola_wallet :
+          (this.paymentOptSelected === 'eMola' )? 'https://e2payments.explicador.co.mz/v1/c2b/emola-payment/' + credentials.emola_wallet :
           null // retorna-se null caso nao se tenha selecionado Mpesa ou eMola
 
       // Realizacao da transacao usando axios.post
